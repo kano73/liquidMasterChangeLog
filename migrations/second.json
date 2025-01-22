@@ -1,0 +1,8 @@
+{
+  "author":"pavel",
+  "description":"second change",
+  "statements": [
+    "ALTER TABLE person ADD COLUMN age int",
+    "CREATE TABLE book (id int, name varchar(255))"
+  ]
+}
