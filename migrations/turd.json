@@ -1,0 +1,7 @@
+{
+  "author":"pavel",
+  "description":"thurd change",
+  "statements": [
+    "DROP TABLE book"
+  ]
+}
