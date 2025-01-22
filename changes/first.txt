@@ -1,0 +1,8 @@
+{
+    "author":"pavel",
+    "description":"first change",
+    "statements": [
+        "CREATE TABLE person (id INT PRIMARY KEY, name VARCHAR(50))",
+        "CREATE INDEX idx_person_name ON person(name)"
+    ]
+}
