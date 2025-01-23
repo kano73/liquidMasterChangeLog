@@ -1,12 +1,17 @@
 {
     "author": "pavel",
-    "description": "Create and populate table1",
+    "description": "Create and populate tables",
     "statements": [
-        "CREATE TABLE table1 (id INT PRIMARY KEY, name VARCHAR(50), created_at TIMESTAMP)",
-        "INSERT INTO table1 (id, name, created_at) VALUES (1, 'Table1 Row1', NOW())",
-        "INSERT INTO table1 (id, name, created_at) VALUES (2, 'Table1 Row2', NOW())"
+        "CREATE TABLE my_user (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL, gender VARCHAR(10));",
+        "CREATE TABLE author (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL, info TEXT);",
+        "CREATE TABLE book (id SERIAL PRIMARY KEY, title VARCHAR(200) NOT NULL, author_id INT NOT NULL REFERENCES author(id) ON DELETE CASCADE, last_borrowed_by INT REFERENCES my_user(id) ON DELETE SET NULL, is_available BOOLEAN NOT NULL DEFAULT TRUE);",
+        "CREATE TABLE user_book (user_id INT NOT NULL REFERENCES my_user(id) ON DELETE CASCADE, book_id INT NOT NULL REFERENCES book(id) ON DELETE CASCADE, PRIMARY KEY (user_id, book_id), UNIQUE (user_id, book_id));"
     ],
     "rollBack": [
-        "DROP TABLE table1"
+        "DROP TABLE user_book",
+        "drop table book",
+        "drop table author",
+        "drop table my_user"
     ]
 }
+
