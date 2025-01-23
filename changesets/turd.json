@@ -3,5 +3,8 @@
   "description":"thurd change",
   "statements": [
     "DROP TABLE book"
+  ],
+  "rollBack": [
+    "CREATE TABLE book (id int, name varchar(255))"
   ]
 }

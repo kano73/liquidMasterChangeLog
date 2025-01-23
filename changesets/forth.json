@@ -4,5 +4,8 @@
   "statements": [
     "CREATE TABLE book (id INT PRIMARY KEY, name VARCHAR(50))",
     "ALTER TABLE book ADD COLUMN author varchar(50)"
+  ],
+  "rollBack": [
+    "DROP TABLE book"
   ]
 }

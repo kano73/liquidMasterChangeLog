@@ -3,5 +3,8 @@
   "description":"5 change",
   "statements": [
     "DROP TABLE book"
+  ],
+  "rollBack": [
+    "CREATE TABLE book (id INT PRIMARY KEY, name VARCHAR(50))"
   ]
 }

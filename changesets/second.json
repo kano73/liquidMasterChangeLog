@@ -4,5 +4,9 @@
   "statements": [
     "ALTER TABLE person ADD COLUMN age int",
     "CREATE TABLE book (id int, name varchar(255))"
+  ],
+  "rollBack": [
+    "ALTER TABLE person DROP COLUMN age ",
+    "DROP TABLE book"
   ]
 }
