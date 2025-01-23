@@ -1,0 +1,8 @@
+{
+  "author":"pavel",
+  "description":"forth change",
+  "statements": [
+    "CREATE TABLE book (id INT PRIMARY KEY, name VARCHAR(50))",
+    "ALTER TABLE book ADD COLUMN author varchar(50)"
+  ]
+}
