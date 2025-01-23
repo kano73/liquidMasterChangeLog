@@ -1,10 +1,12 @@
 {
-  "author":"pavel",
-  "description":"thurd change",
+  "author": "pavel",
+  "description": "Create and populate table3",
   "statements": [
-    "DROP TABLE book"
+    "CREATE TABLE table3 (id SERIAL PRIMARY KEY, title VARCHAR(80), amount DECIMAL(10,2))",
+    "INSERT INTO table3 (title, amount) VALUES ('Table3 Title1', 100.50)",
+    "INSERT INTO table3 (title, amount) VALUES ('Table3 Title2', 200.75)"
   ],
   "rollBack": [
-    "CREATE TABLE book (id int, name varchar(255))"
+    "DROP TABLE table3"
   ]
 }

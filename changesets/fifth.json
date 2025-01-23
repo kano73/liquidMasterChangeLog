@@ -1,10 +1,12 @@
 {
-  "author":"pavel",
-  "description":"5 change",
+  "author": "pavel",
+  "description": "Create and populate table5",
   "statements": [
-    "DROP TABLE book"
+    "CREATE TABLE table5 (id INT PRIMARY KEY, name VARCHAR(50), is_active BOOLEAN)",
+    "INSERT INTO table5 (id, name, is_active) VALUES (1, 'Table5 Row1', TRUE)",
+    "INSERT INTO table5 (id, name, is_active) VALUES (2, 'Table5 Row2', FALSE)"
   ],
   "rollBack": [
-    "CREATE TABLE book (id INT PRIMARY KEY, name VARCHAR(50))"
+    "DROP TABLE table5"
   ]
 }

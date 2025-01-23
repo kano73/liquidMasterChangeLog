@@ -1,12 +1,12 @@
 {
-  "author":"pavel",
-  "description":"forth change",
+  "author": "pavel",
+  "description": "Create and populate table4",
   "statements": [
-    "CREATE TABLE book (id INT PRIMARY KEY, name VARCHAR(50))",
-    "DROP TABLE ghghgghh",
-    "ALTER TABLE book ADD COLUMN author varchar(50)"
+    "CREATE TABLE table4 (id INT PRIMARY KEY, name VARCHAR(50), description TEXT)",
+    "INSERT INTO table4 (id, name, description) VALUES (1, 'Row1', 'Description1')",
+    "INSERT INTO table4 (id, name, description) VALUES (2, 'Row2', 'Description2')"
   ],
   "rollBack": [
-    "DROP TABLE book"
+    "DROP TABLE table4"
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "author":"pavel",
-  "description":"second change",
+  "author": "pavel",
+  "description": "Create and populate table2",
   "statements": [
-    "ALTER TABLE person ADD COLUMN age int",
-    "CREATE TABLE book (id int, name varchar(255))"
+    "CREATE TABLE table2 (id INT PRIMARY KEY, description VARCHAR(100), updated_at TIMESTAMP)",
+    "INSERT INTO table2 (id, description, updated_at) VALUES (1, 'Table2 Description1', NOW())",
+    "INSERT INTO table2 (id, description, updated_at) VALUES (2, 'Table2 Description2', NOW())"
   ],
   "rollBack": [
-    "ALTER TABLE person DROP COLUMN age ",
-    "DROP TABLE book"
+    "DROP TABLE table2"
   ]
 }

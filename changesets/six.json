@@ -2,11 +2,11 @@
   "author":"pavel",
   "description":"six change",
   "statements": [
-    "ALTER TABLE person ADD COLUMN email varchar(50)",
-    "CREATE TABLE tester (id int, name varchar(255))"
+    "DROP TABLE table1"
   ],
   "rollBack": [
-    "ALTER TABLE person DROP COLUMN email ",
-    "DROP TABLE tester"
+    "CREATE TABLE table1 (id INT PRIMARY KEY, name VARCHAR(50), created_at TIMESTAMP)",
+    "INSERT INTO table1 (id, name, created_at) VALUES (1, 'Table1 Row1', NOW())",
+    "INSERT INTO table1 (id, name, created_at) VALUES (2, 'Table1 Row2', NOW())"
   ]
 }
