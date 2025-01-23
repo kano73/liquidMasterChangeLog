@@ -1,0 +1,12 @@
+{
+  "author":"pavel",
+  "description":"six change",
+  "statements": [
+    "ALTER TABLE person ADD COLUMN email varchar(50)",
+    "CREATE TABLE tester (id int, name varchar(255))"
+  ],
+  "rollBack": [
+    "ALTER TABLE person DROP COLUMN email ",
+    "DROP TABLE tester"
+  ]
+}
