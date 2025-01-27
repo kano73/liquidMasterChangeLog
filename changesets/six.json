@@ -1,12 +1,12 @@
 {
   "author":"pavel",
-  "description":"six change",
+  "description":"six table change",
   "statements": [
-    "DROP TABLE table1"
+    "CREATE TABLE table6 (id INT PRIMARY KEY, name VARCHAR(50), is_active BOOLEAN)",
+    "INSERT INTO table6 (id, name, is_active) VALUES (1, 'Table5 Row1', TRUE)",
+    "INSERT INTO table6 (id, name, is_active) VALUES (2, 'Table5 Row2', FALSE)"
   ],
   "rollBack": [
-    "CREATE TABLE table1 (id INT PRIMARY KEY, name VARCHAR(50), created_at TIMESTAMP)",
-    "INSERT INTO table1 (id, name, created_at) VALUES (1, 'Table1 Row1', NOW())",
-    "INSERT INTO table1 (id, name, created_at) VALUES (2, 'Table1 Row2', NOW())"
+    "DROP TABLE table6"
   ]
 }

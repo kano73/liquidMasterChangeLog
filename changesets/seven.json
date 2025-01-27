@@ -1,0 +1,12 @@
+{
+  "author":"pavel",
+  "description":"seven table change",
+  "statements": [
+    "CREATE TABLE table7 (id INT PRIMARY KEY, name VARCHAR(50), is_active BOOLEAN)",
+    "INSERT INTO table7 (id, name, is_active) VALUES (1, 'Table5 Row1', TRUE)",
+    "INSERT INTO table7 (id, name, is_active) VALUES (2, 'Table5 Row2', FALSE)"
+  ],
+  "rollBack": [
+    "DROP TABLE table7"
+  ]
+}
